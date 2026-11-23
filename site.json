@@ -1,0 +1,7 @@
+{
+  "repo": "LTP3-party",
+  "storage_zone": "ltp3-party",
+  "pullzone": "ltp3-party",
+  "hostname": "ltp3-party.sauthier.family",
+  "not_found_page": "/404.html"
+}

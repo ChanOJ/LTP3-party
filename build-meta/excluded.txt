@@ -1,0 +1,15 @@
+compos/Ademo.txt
+compos/Bodem.txt
+compos/Cpc64.txt
+compos/Dpc4k.txt
+compos/E2dgf.txt
+compos/F3dgf.txt
+compos/Gogfx.txt
+compos/Hchip.txt
+compos/Imod4.txt
+compos/Jmodm.txt
+compos/Kmp3s.txt
+compos/Lwebs.txt
+compos/Mwild.txt
+compos/Ngame.txt
+scripts/votes999.asp
