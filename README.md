@@ -12,6 +12,12 @@ Kept online for history, no longer developed. Visitors can never write anything:
 the cleaned static pages committed in `site/`, the CDN only serves files, and every method
 except GET/HEAD/OPTIONS is refused at the edge.
 
+## Search engines
+
+`scripts/seo.py` writes `robots.txt` (allow everything, with the `Sitemap:` line) and `sitemap.xml` (indexable pages only) into `site/`; `statify.py` runs it at the end of the build (alone: `python3 -I scripts/seo.py`).
+
+`scripts/frame-restore.js` (one `<script>` tag in every page, added by `seo.py`) sends a page opened on its own (a search result) to `index.html#p=<page>`; `index.html` and `party.html` pass it down to the iframe and to the `content` frame. The page stays a plain file, so crawlers still read it.
+
 ## Layout
 
 | Path | Content |
