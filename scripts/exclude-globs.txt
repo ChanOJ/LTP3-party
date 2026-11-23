@@ -1,0 +1,20 @@
+# Files that must NOT be published (relative to site/; no '/' = basename anywhere; '*' crosses '/').
+# Read by scripts/statify.py, scripts/verify_build.py and scripts/check_excludes.py.
+# The vote page (scripts/votes999.asp) is replaced by sheets/votes.html, rendered from compos/*.txt.
+
+# OS junk and backups
+.DS_Store
+Thumbs.db
+*.bak
+# server-side code: ASP sources, SSI fragments
+*.asp
+*.inc
+# the compo lists fed the vote form: rendered into sheets/votes.html, the files themselves stay private
+compos/
+# hosting leftovers and registration/vote data of the old server (never part of party/, listed as a safety net)
+.bash*
+.Xdefaults
+.inputrc
+csv2sql_*.vbs
+*.vbs
+ltpdata/
