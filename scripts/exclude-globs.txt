@@ -18,3 +18,4 @@ compos/
 csv2sql_*.vbs
 *.vbs
 ltpdata/
+img/ENTIER.jpg

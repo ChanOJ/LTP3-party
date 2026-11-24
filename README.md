@@ -64,6 +64,8 @@ Source: `Sites web/ltp3/party/` on the NAS (44 files), copied into `private/site
   (`csv2sql_*.vbs`), `votes.bak` (a backup of the vote page source), `ltpdata/` (logins, forum), shell
   dotfiles of the old server (`.bash*`, `.Xdefaults`, `.inputrc`) and the public website
   (`http/`, `secure/`).
+- **Not published, also** (2026-11-24): `img/ENTIER.jpg`, a menu mock-up no page uses.
+- **Sitemap** (2026-11-24): lists `/`, the sheets and `index.html`; `menu.html` and `party.html` are left out (`SKIP_SITEMAP` in `scripts/seo.py`).
 - **Left as they were**: handles and groups as listed on the entries and jury pages (no real
   names or contact details anywhere), the party LAN settings of `network.html` (private
   192.168.x.x addresses), the wording and typos of the pages.
@@ -102,7 +104,7 @@ python3 scripts/preview.py 3871
 
 ## Removal requests
 
-Pages that list or describe people end with a small footer, "To be removed from this page, contact me." (a `mailto:` link). `scripts/statify.py` adds it (`is_people_page`), so it survives rebuilds; `scripts/verify_build.py` leaves it out of its `mailto:` and e-mail checks.
+Pages that show a family name, a full postal address or an e-mail local part in clear would end with a small footer, "To be removed from this page, contact me." (a `mailto:` link), limited to the site width. None today: the entries, jury and votes pages list handles and groups only, so they carry none (removed 2026-11-24). `scripts/statify.py` adds it (`is_people_page`), so it survives rebuilds; `scripts/verify_build.py` leaves it out of its `mailto:` and e-mail checks.
 
 ## Deploying
 

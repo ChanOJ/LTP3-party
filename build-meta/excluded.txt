@@ -12,4 +12,5 @@ compos/Kmp3s.txt
 compos/Lwebs.txt
 compos/Mwild.txt
 compos/Ngame.txt
+img/ENTIER.jpg
 scripts/votes999.asp
