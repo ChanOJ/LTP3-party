@@ -30,7 +30,7 @@ ENC = "iso-8859-1"
 # ---- removal-request footer: added to every page that lists or describes people
 REMOVAL_MARK = 'id="removal-note"'
 REMOVAL_NOTE = (
-    '<div id="removal-note" style="clear:both;margin:28px auto 8px;padding:6px 8px 0;width:60%;'
+    '<div id="removal-note" style="clear:both;margin:28px auto 8px;padding:6px 8px 0;width:800px;max-width:96%;'
     'border-top:1px solid #808080;text-align:center;font:10px/14px Verdana,Arial,Helvetica,sans-serif;'
     'color:#808080;background:transparent">To be removed from this page, '
     '<a href="mailto:chandra_oj@pm.me" style="color:#808080;text-decoration:underline">contact me</a>.</div>'
@@ -46,8 +46,9 @@ def add_removal_note(text):
         return text[: m.start()] + REMOVAL_NOTE + "\n" + text[m.start():]
     return text + "\n" + REMOVAL_NOTE + "\n"
 
-# Pages that list or describe people (entries, jury, votes).
-PEOPLE_PAGES = {"sheets/entries.html", "sheets/jury.html", "sheets/votes.html"}
+# Pages that show a family name, a full postal address or an e-mail local part in clear.
+# None today: entries, jury and votes list handles and groups only (2026-11-24), so no footer.
+PEOPLE_PAGES = set()
 
 
 def is_people_page(rel):

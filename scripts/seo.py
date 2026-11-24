@@ -34,6 +34,8 @@ TAG = b'<script src="/frame-restore.js"></script>'
 NOT_FOUND_NAMES = {"404.htm", "404.html"}
 # Alternative skins (/skin/<name>/...) duplicate the pages of the default one: not listed in the sitemap.
 SKIP_PREFIXES = ("skin/",)
+# Pages that only show a menu or a frameset (restored into party.html): not listed in the sitemap.
+SKIP_SITEMAP = {"menu.html", "party.html"}
 
 
 def html_files(site):
@@ -66,7 +68,7 @@ def write_sitemaps(site, host):
     urls = []
     for p in html_files(site):
         rel = p.relative_to(site).as_posix()
-        if rel.lower() in NOT_FOUND_NAMES or rel.startswith(SKIP_PREFIXES) or not indexable(p):
+        if rel.lower() in NOT_FOUND_NAMES or rel in SKIP_SITEMAP or rel.startswith(SKIP_PREFIXES) or not indexable(p):
             continue
         urls.append("/" if rel.lower() in ("index.html", "index.htm") else "/" + quote(rel))
     for old in site.glob("sitemap*.xml"):
